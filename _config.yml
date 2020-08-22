@@ -1,0 +1,16 @@
+# Site settings
+title: Lee Woo Choul
+description: Jekyll Theme Minimal Resume
+# baseurl: "" # the subpath of your site, e.g. /blog
+# url: "https://wclee7.github.io/" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
+
+# User settings
+username: LEE WOO CHOUL
+user_description: Java Dev, Software Engineer, Server BackEnd, Team Manager
+user_title: Software Engineer (w. Java etc)
+email: urlover@hanmail.net
+# twitter_username: urlover
+# github_username:  wclee7
+# gplus_username:  wclee
+
+exclude: ['package.json', 'src' , 'node_modules']
