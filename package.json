@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Mauricio Urraco <mauriurraco@gmail.com>",
+  "author": "wclee <urlover@hanmail.net>",
   "license": "MIT",
   "dependencies": {
     "browser-sync": "^2.18.6",
