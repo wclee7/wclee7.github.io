@@ -1,46 +1,130 @@
+/* ============================================
+   About Section
+   ============================================ */
 #about {
-  font-size: 120%;
-  
-  width: 90%;
+  max-width: 1200px;
   margin: 0 auto;
-  max-width: 960px;
-  @media only screen and (min-width: $cut) {
-    width: 80%;
-  }
-  svg {
-    width: 60px !important;
-    height: auto;
-  }
-}
-
-.tech {
-  margin: 10px;
-  flex: 1 1 0;
-  h2, h3 {
-    font-weight: 400;
-  }
-}
-
-.user {
-  text-align: center;
-  font-size: 60px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  p {
-    font-size: 16px;
-  }
-  @media only screen and (min-width: $cut) {
-    flex-wrap: nowrap;
-    font-size: 75px;
-  }
+  padding: var(--spacing-xl) var(--spacing-md);
+  position: relative;
+  z-index: 1;
 }
 
 .user-details {
   text-align: center;
-  margin: 5px auto;
-  h1 {
-    font-weight: 400;
+  margin-bottom: var(--spacing-xl);
+  animation: fadeInUp 1s ease;
+}
+
+.user-details h1 {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  background: var(--gradient-warm);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: var(--spacing-md);
+}
+
+.user-details p {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  max-width: 800px;
+  margin: 0 auto var(--spacing-sm);
+  line-height: 1.8;
+}
+
+.user-details a {
+  color: var(--primary-color);
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  transition: all var(--transition-normal);
+}
+
+.user-details a:hover {
+  border-bottom-color: var(--primary-color);
+}
+
+/* ============================================
+   Tech Cards - 기술 스택
+   ============================================ */
+.user {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-xl);
+}
+
+.tech {
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all var(--transition-normal);
+  animation: fadeInUp 1s ease;
+}
+
+.tech:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.tech:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.tech:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.tech:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-light);
+}
+
+.tech h2 {
+  font-size: 1.8rem;
+  margin-bottom: var(--spacing-md);
+  background: var(--gradient-warm);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+.tech p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+.tech svg {
+  width: 60px;
+  height: 60px;
+  margin-bottom: var(--spacing-sm);
+  opacity: 0.8;
+  transition: all var(--transition-normal);
+}
+
+.tech:hover svg {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* ============================================
+   Responsive Design - About
+   ============================================ */
+@media (max-width: 768px) {
+  #about {
+    padding: var(--spacing-md) var(--spacing-sm);
+  }
+
+  .user {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
+  }
+
+  .tech {
+    padding: var(--spacing-md);
   }
 }

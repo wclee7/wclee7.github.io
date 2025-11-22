@@ -1,140 +1,172 @@
+/* ============================================
+   Header Section - Hero
+   ============================================ */
 #particles-js {
-  background: $main;
-  display: flex;
-  vertical-align: bottom;
+  position: relative;
   min-height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-sunset);
   background-attachment: fixed;
-  .particles-js-canvas-el {
-    height: 100vh !important;
-  }
+  overflow: hidden;
+}
+
+#particles-js::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at 20% 50%, rgba(255, 179, 71, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(78, 205, 196, 0.2) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.particles-js-canvas-el {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
 }
 
 .header {
-  font-family: 'Montserrat', sans-serif;
-  z-index: 1;
+  position: relative;
+  z-index: 10;
   text-align: center;
-  color:#FFF;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: 0 auto;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  .site-title {
-    font-size: 50px;
-    display: block;
-    line-height: 1;
-    color: #FFF;
-    @media only screen and (min-width:$cut){
-      margin: 0;
-      font-size: 76px;
-    }
-  }
-  .site-description {
-    font-size: 20px;
-    display: block;
-    line-height: 1;
-    color: #FFF;
-    margin-top: 10px;
-    @media only screen and (min-width:$cut){
-      font-size: 34px;
-    }
-  }
+  padding: var(--spacing-md);
+  animation: fadeInUp 1s ease;
 }
 
-.header-links {
-  margin: 10px;
-  .link {
-    color: #FFF;
-    text-decoration: none;
-    font-size: 15px;
-    margin: 10px;
-    @media only screen and (min-width:$cut){
-      font-size: 20px;
-    }
-  }
+.site-title {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 700;
+  color: var(--text-white);
+  margin-bottom: var(--spacing-sm);
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  letter-spacing: -1px;
+  animation: fadeInUp 1s ease 0.2s both;
 }
 
+.site-description {
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 400;
+  margin-bottom: var(--spacing-lg);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  animation: fadeInUp 1s ease 0.4s both;
+}
+
+/* ============================================
+   Header Icons - Social Links
+   ============================================ */
 .header-icons {
   display: flex;
+  gap: var(--spacing-sm);
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  margin-top: var(--spacing-md);
+  animation: fadeInUp 1s ease 0.6s both;
+}
 
-  text-align: center;
-  a {
-    // no borders
-    outline: 0 !important;
-    border: none !important;
-    outline-style: none !important;
-    -moz-outline-style: none !important;
+.header-icons .icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  color: var(--text-white);
+  font-size: 1.3rem;
+  transition: all var(--transition-normal);
+  cursor: pointer;
+}
 
-    padding: none;
-    margin: none;
+.header-icons .icon:hover {
+  background: var(--text-white);
+  color: var(--primary-color);
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  border-color: var(--text-white);
+}
+
+.header-icons .icon:active {
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* ============================================
+   Scroll Down Indicator
+   ============================================ */
+.down {
+  position: absolute;
+  bottom: var(--spacing-lg);
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  z-index: 10;
+  animation: bounce 2s infinite;
+  border: none !important;
+}
+
+.down .icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  color: var(--text-white);
+  font-size: 1.5rem;
+  transition: all var(--transition-normal);
+}
+
+.down:hover .icon {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(5px);
+}
+
+/* ============================================
+   Responsive Design - Header
+   ============================================ */
+@media (max-width: 768px) {
+  .header {
+    padding: var(--spacing-sm);
   }
-  .icon {
-    text-align: center;
-    color: #FFF;
-    width: 20px;
-    height: 20px;
-    font-size: 20px;
-    padding: 10px;
-    margin: 5px;
-    border-radius: 50%;
-    border: 2px solid #FFF;
-    transition: all .5s;
-    &:hover {
-      color: $main;
-      background: #FFF;
-    }
-    &:active {
-      color: $main;
-      background: #FFF;
-    }
-    @media only screen and (min-width:$cut) {
-      width: 30px;
-      height: 30px;
-      font-size: 30px;
-      line-height: 30px;
-    }
+
+  .header-icons {
+    gap: var(--spacing-xs);
+  }
+
+  .header-icons .icon {
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
   }
 }
 
-.down {
-  color: #FFF;
-  position: absolute;
-  bottom: 25px;
-  width: 100%;
-  margin: 0 auto;
-  display: block;
-  text-align: center;
-  font-size: 30px;
-  line-height: 30px;
-  cursor: pointer;
-  // no borders
-  outline: 0 !important;
-  border: none !important;
-  outline-style: none !important;
-  -moz-outline-style: none !important;
-  .icon {
-      position: absolute;
-      -webkit-transform-style: preserve-3d;
-      transform-style: preserve-3d;
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-      width: 100px;
-      height: 100px;
-      fill: #fff;
-      -webkit-animation: pulse 1.3s infinite;
-      animation: pulse 1.3s infinite;
-      &:hover {
-        color: $sec;
-      }
-      &:active {
-        color: $sec;
-      }
+@media (max-width: 480px) {
+  .site-title {
+    font-size: 2.5rem;
+  }
+
+  .site-description {
+    font-size: 1.1rem;
+  }
+
+  .header-icons .icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
   }
 }

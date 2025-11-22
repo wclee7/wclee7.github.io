@@ -1,4 +1,77 @@
-$main: #1a222c;
+/* ============================================
+   CSS Variables - 따뜻하고 깔끔한 색상 팔레트
+   ============================================ */
+:root {
+    /* Primary Colors - 따뜻한 오렌지/코랄 톤 */
+    --primary-color: #FF6B6B;
+    --primary-light: #FFB347;
+    --primary-dark: #E85D5D;
+
+    /* Secondary Colors - 부드러운 블루/틸 톤 */
+    --secondary-color: #4ECDC4;
+    --secondary-light: #45B7D1;
+    --secondary-dark: #3AAFA9;
+
+    /* Background Colors - 크림/아이보리 톤 */
+    --bg-primary: #FFFBF5;
+    --bg-secondary: #FFF9F0;
+    --bg-card: rgba(255, 255, 255, 0.85);
+    --bg-overlay: rgba(255, 251, 245, 0.95);
+
+    /* Text Colors */
+    --text-primary: #2C3E50;
+    --text-secondary: #34495E;
+    --text-light: #7F8C8D;
+    --text-white: #FFFFFF;
+
+    /* Accent Colors - 골드/앰버 톤 */
+    --accent-color: #F39C12;
+    --accent-light: #E67E22;
+
+    /* Gradients */
+    --gradient-warm: linear-gradient(135deg, #FFB347 0%, #FF6B6B 100%);
+    --gradient-cool: linear-gradient(135deg, #4ECDC4 0%, #45B7D1 100%);
+    --gradient-sunset: linear-gradient(135deg, #FF6B6B 0%, #F39C12 50%, #FFB347 100%);
+    --gradient-bg: linear-gradient(135deg, #FFF9F0 0%, #FFFBF5 50%, #FFE8D6 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.15);
+    --shadow-glow: 0 0 20px rgba(255, 107, 107, 0.3);
+
+    /* Border Radius */
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-xl: 32px;
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    --spacing-xl: 4rem;
+
+    /* Typography */
+    --font-heading: 'Poppins', 'Noto Sans KR', sans-serif;
+    --font-body: 'Inter', 'Noto Sans KR', sans-serif;
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+/* SCSS Variables for backward compatibility */
+$main: #2C3E50;
 $sec: #4B5664;
 $purple: #54516A;
 $cut: 768px;
+
+/* New SCSS Variables */
+$primary: #FF6B6B;
+$primary-light: #FFB347;
+$secondary: #4ECDC4;
+$bg-cream: #FFF9F0;
+$text-dark: #2C3E50;

@@ -1,21 +1,45 @@
+/* ============================================
+   Footer
+   ============================================ */
 .footer {
-  background: $main;
-  padding: 10px 0;
-  margin-top: 100px;
+  background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);
+  color: var(--text-white);
   text-align: center;
-  color: #FFF;
-  .love {
-    color: red;
-  }
-  a {
-    text-decoration: none;
-    margin: 0;
-    color: #FFF;
-    &:hover{
-      color: $sec;
-    }
-    &:active {
-      color: $sec;
-    }
-  }
+  padding: var(--spacing-lg) var(--spacing-md);
+  margin-top: var(--spacing-xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-warm);
+}
+
+.footer p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  margin: 0;
+}
+
+.footer a {
+  color: var(--primary-light);
+  font-weight: 500;
+  transition: all var(--transition-normal);
+}
+
+.footer a:hover {
+  color: var(--text-white);
+  text-decoration: underline;
+}
+
+.footer .love {
+  color: var(--primary-color);
+  display: inline-block;
+  animation: heartbeat 1.5s infinite;
 }
