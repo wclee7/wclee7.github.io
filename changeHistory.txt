@@ -1,0 +1,125 @@
+==========================================================
+wclee7.github.io 변경 이력 (Change History)
+==========================================================
+
+[2025-11-22] 홈페이지 전면 리디자인
+----------------------------------------------------------
+작업자: Antigravity AI Assistant
+작업 유형: 신규 작성, 수정
+
+## 주요 변경 사항
+
+### 1. CSS 전면 개편 (assets/css/main.css)
+AS-IS:
+- 구식 디자인 (파티클 배경, 어두운 색상)
+- 제한적인 색상 팔레트
+- 기본적인 레이아웃
+- 오래된 폰트 (Montserrat, Raleway)
+
+TO-BE:
+- 모던하고 따뜻한 디자인
+- 색상 팔레트:
+  * Primary: 따뜻한 오렌지/코랄 톤 (#FF6B6B, #FFB347)
+  * Secondary: 부드러운 블루/틸 톤 (#4ECDC4, #45B7D1)
+  * Background: 크림/아이보리 톤 (#FFF9F0, #FFFBF5)
+  * Accent: 골드/앰버 톤 (#F39C12, #E67E22)
+- CSS 변수 시스템 도입 (유지보수 용이)
+- 글래스모피즘 효과 (backdrop-filter, 반투명 배경)
+- 부드러운 애니메이션 (fadeInUp, bounce, heartbeat)
+- 그라디언트 배경 및 텍스트
+- 반응형 디자인 강화 (모바일, 태블릿, 데스크톱)
+- 타이포그래피: Poppins, Inter, Noto Sans KR
+
+### 2. HTML 파일 업데이트
+
+#### _includes/head.html
+AS-IS:
+- 기본 메타 태그
+- Font Awesome 4.7.0
+- Devicon 라이브러리
+
+TO-BE:
+- Font Awesome 6.5.1 (최신 아이콘)
+- Google Fonts preconnect (성능 최적화)
+- Open Graph 메타 태그 추가 (SNS 공유 최적화)
+- SEO 개선
+
+#### _includes/header.html
+AS-IS:
+- Font Awesome 4 아이콘 (fa fa-envelope 등)
+- 기본 링크 구조
+
+TO-BE:
+- Font Awesome 6 아이콘 (fa-solid, fa-brands)
+- 접근성 개선 (title, rel="noopener noreferrer")
+- 아이콘 업데이트:
+  * Email: fa-solid fa-envelope
+  * Instagram: fa-brands fa-instagram
+  * Facebook: fa-brands fa-facebook
+  * LinkedIn: fa-brands fa-linkedin
+  * GitHub: fa-brands fa-github
+  * Bitbucket: fa-brands fa-bitbucket
+  * Blog: fa-solid fa-blog
+
+#### _includes/about.html
+AS-IS:
+- SVG 아이콘 (주석 처리됨)
+- 단순한 텍스트 레이아웃
+
+TO-BE:
+- 카드 기반 레이아웃 (3개 카드)
+- Font Awesome 6 아이콘 사용
+- 기술 스택별 아이콘 추가:
+  * Java 개발자: Java, Server, Database 아이콘
+  * Code: JavaScript, Python, Vue.js, React 아이콘
+  * Tech Stack: Git, Docker, Linux 아이콘
+- 내용 구조 개선 (강조, 줄바꿈)
+
+#### _includes/footer.html
+AS-IS:
+- 연도: 2000-2020
+- 기본 푸터 디자인
+
+TO-BE:
+- 연도: 2000-2025 (최신화)
+- 하트 이모지 애니메이션 추가
+- 개선된 스타일링
+
+#### _layouts/default.html
+AS-IS:
+- lang="en"
+- Devicon CDN 링크
+
+TO-BE:
+- lang="ko" (한국어 설정)
+- Devicon 링크 제거 (Font Awesome으로 대체)
+- 구조 최적화
+
+### 3. 디자인 특징
+- 따뜻하고 깔끔한 느낌
+- 부드러운 그라디언트와 그림자
+- 호버 효과 및 마이크로 애니메이션
+- 글래스모피즘 카드 디자인
+- 완전한 반응형 레이아웃
+- 접근성 개선 (focus styles, aria-labels)
+
+### 4. GitHub Pages 호환성
+- 모든 변경사항은 GitHub Pages와 완벽 호환
+- CDN 기반 외부 리소스 사용
+- Jekyll 표준 형식 준수
+- 정적 파일만 사용 (빌드 불필요)
+
+## 배포 방법
+1. Git에 commit 및 push
+2. GitHub Pages 자동 빌드
+3. https://wclee7.github.io/ 에서 확인
+
+## 기술 스택
+- Jekyll (Static Site Generator)
+- HTML5, CSS3
+- Font Awesome 6.5.1
+- Google Fonts (Poppins, Inter, Noto Sans KR)
+- Particles.js (배경 효과)
+- Sweet Scroll (부드러운 스크롤)
+
+==========================================================
